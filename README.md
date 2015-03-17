@@ -1,7 +1,7 @@
 saviosnow
 =======
 
-SAVIO SNOW - Example code for using SNOW on the UCB SAVIO CLUSTER
+SAVIO SNOW - Example code for using SNOW on the UCB SAVIO cluster
 
 I couldn't make Rmpi work on SAVIO, so I decided to use the [snowslurm](https://code.google.com/p/snowslurm/source/browse/snowslurm/R/snowslurm.R) package from UMBC. 
 This example is cribbed from the [UMBC HPC documentation](http://www.umbc.edu/hpcf/user-resources/how-to-run-R.html#heading_toc_j_5)
@@ -10,42 +10,40 @@ This example is cribbed from the [UMBC HPC documentation](http://www.umbc.edu/hp
 
 ### Installation
 
-Download the latest version from github:
+* Download the latest version from github
 
+    ````
+    git clone https://github.com/jeremyrcoyle/saviosnow.git
+    ````
 
-```
-git clone https://github.com/jeremyrcoyle/saviosnow.git
-```
+* Run the setup script to setup the right environment on SAVIO
 
-Run the setup script to setup the right environment on SAVIO
-
-```
-cd saviosnow
-./setup.sh
-```
+    ````
+    cd saviosnow
+    ````
 
 ### Usage
-Modify the example job
-```
-emacs slurmjob.sh
-```
+* Modify the example job -- change the e-mail address and working directory lines
 
-You want to change the e-mail address and working directory lines.
+    ````
+    emacs slurmjob.sh
+    ```
 
+* Submit the example job 
 
-Submit the example job 
-```
-sbatch slurmjob.sh
-```
+    ````
+    sbatch slurmjob.sh
+    ```
 
-See its running status
-```
-squeue -j [jobnumber]
-```
+* See its running status
 
-Check the output
-```
-less slurm.out
-less exsnowslurm.Rout
-```
+    ````
+    squeue -j [jobnumber]
+    ```
 
+* Check the output
+
+    ````
+    less slurm.out
+    less exsnowslurm.Rout
+    ```
