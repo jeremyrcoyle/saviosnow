@@ -20,6 +20,7 @@ This example is cribbed from the [UMBC HPC documentation](http://www.umbc.edu/hp
 
     ````
     cd saviosnow
+    ./setup.sh
     ````
 
 ### Usage
