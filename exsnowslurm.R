@@ -14,6 +14,7 @@ sim=function(n=1000){
 }
 
 B=100
+dir.create("tmpdata", showWarnings = FALSE)
 allresults=foreach(i=icount(B),.options.multicore=mcoptions) %dopar% {
   result=sim()
   #always want to save per iteration results in case something goes wrong
