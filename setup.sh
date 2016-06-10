@@ -9,6 +9,6 @@ module load r
 R --no-save < Rsetup.R
 
 #install snowslurm
-git clone https://code.google.com/p/snowslurm/
+git clone https://github.com/jeremyrcoyle/snowslurm.git
 R CMD INSTALL snowslurm/snowslurm
 rm -Rf snowslurm
